@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>error</title>
+</head>
+<body>
+<p>
+    This is <span th:text="${status} ?: _">???</span> error page.
+</p>
+<ul>
+    <li>message: <span th:text="${message} ?: _">?</span></li>
+    <li>detail: <span th:text="${detail} ?: _">?</span></li>
+</ul>
+</body>
+</html>

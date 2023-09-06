@@ -39,6 +39,8 @@ public class Field extends BaseTime{
     @Column(nullable = true)
     private String dtlCont;
     @Column(nullable = false)
+    private String telNo;
+    @Column(nullable = false)
     private String revStdDayNm;
     @Column(nullable = false)
     private String revStdDay;
@@ -52,7 +54,7 @@ public class Field extends BaseTime{
     private LocalDateTime svcOpnEndDt;
 
     @Builder
-    public Field(String svcStatNm, String svcNm, String payAtNm, String placeNm, String svcUrl, LocalDateTime rcptBgnDt, LocalDateTime rcptEndDt, String areaNm, String imgUrl, String dtlCont, String revStdDayNm, String revStdDay, LocalDateTime vMin, LocalDateTime vMax, LocalDateTime svcOpnBgnDt, LocalDateTime svcOpnEndDt) {
+    public Field(String svcStatNm, String svcNm, String payAtNm, String placeNm, String svcUrl, LocalDateTime rcptBgnDt, LocalDateTime rcptEndDt, String areaNm, String imgUrl, String dtlCont, String telNo, String revStdDayNm, String revStdDay, LocalDateTime vMin, LocalDateTime vMax, LocalDateTime svcOpnBgnDt, LocalDateTime svcOpnEndDt) {
         this.svcStatNm = svcStatNm;
         this.svcNm = svcNm;
         this.payAtNm = payAtNm;
@@ -63,6 +65,7 @@ public class Field extends BaseTime{
         this.areaNm = areaNm;
         this.imgUrl = imgUrl;
         this.dtlCont = dtlCont;
+        this.telNo = telNo;
         this.revStdDayNm = revStdDayNm;
         this.revStdDay = revStdDay;
         this.vMin = vMin;

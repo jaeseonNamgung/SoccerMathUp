@@ -28,18 +28,13 @@ public class Member extends BaseTime{
     @Column(nullable = false)
     private String phone;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "team_id")
-    private Team team;
-
     @Builder
-    public Member(String memberId, String password, String name, String nickname, Integer age, String phone, Team team) {
+    public Member(String memberId, String password, String name, String nickname, Integer age, String phone) {
         this.memberId = memberId;
         this.password = password;
         this.name = name;
         this.nickname = nickname;
         this.age = age;
         this.phone = phone;
-        this.team = team;
     }
 }

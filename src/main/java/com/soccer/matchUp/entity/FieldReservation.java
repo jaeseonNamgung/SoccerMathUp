@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class Reservation extends BaseTime {
+public class FieldReservation extends BaseTime {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -23,7 +23,7 @@ public class Reservation extends BaseTime {
     private Field field;
 
     @Builder
-    public Reservation(LocalDateTime reservationDate, Field field) {
+    public FieldReservation(LocalDateTime reservationDate, Field field) {
         this.reservationDate = reservationDate;
         this.field = field;
     }
